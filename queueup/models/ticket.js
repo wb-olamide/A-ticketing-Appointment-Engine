@@ -30,5 +30,9 @@ class Ticket {
       throw new Error(`Value should include ${Ticket.statuses.join(", ")}`);
     }
   }
+
+  describe() {
+    return `${this.number} - ${this.customer.name}(${this.customer.priority}) - ${this.service} - waiting since${this.issuedAt.toLocaleTimeString()}`;
+  }
 }
 const Ticket1 = new Ticket("001", "Olamide", "recharge");
