@@ -15,7 +15,6 @@ class Customer {
 
     if (Customer.priorities.includes(lowerValue)) {
       this._priority = lowerValue;
-      console.log(`set priority is ${lowerValue} `);
     } else {
       throw new Error(
         `Priority must include ${Customer.priorities.join(", ")}`,
@@ -29,4 +28,4 @@ class Customer {
 
 const customerOne = new Customer("ade", "09061118351", "disabled");
 
-export default Customer;
+module.exports = Customer;
