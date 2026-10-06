@@ -40,18 +40,37 @@ class Stack {
   // Big O complexity O(1)
 
   size() {
-    return `stack length is ${this.length}`;
+    return this.length;
   }
+  // Big O complexity O(1)
+
+  isEmpty() {
+    // if (this.top === null || this.length === 0) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    return this.top === null || this.length === 0;
+  }
+  // Big O complexity O(1)
 }
 
 let mainStack = new Stack();
-mainStack.push("hello");
-mainStack.push("hi");
-mainStack.pop();
+mainStack.push("A");
+mainStack.push("B");
+mainStack.push("C");
 
-// console.log(mainStack.peek());
+console.log(mainStack.peek());
+console.log(mainStack.size());
+mainStack.pop();
 mainStack.pop();
 console.log(mainStack.size());
+console.log(mainStack.isEmpty());
+
+// console.log(mainStack.peek());
+// mainStack.pop();
+// console.log(mainStack.size());
+// console.log(mainStack.isEmpty());
 
 // console.log(mainStack.peek());
 
