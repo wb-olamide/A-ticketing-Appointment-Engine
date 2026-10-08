@@ -12,6 +12,7 @@ class Queue {
     this.length = 0;
   }
 
+  // Big O complexity O(1)
   enqueue(value) {
     const newNode = new Node(value);
     if (this.length === 0 || this.front === null) {
@@ -25,6 +26,7 @@ class Queue {
     return newNode;
   }
 
+  // Big O complexity O(1)
   dequeue() {
     if (this.length === 0) {
       return undefined;
@@ -37,13 +39,42 @@ class Queue {
     this.length--;
     return removedNode.data;
   }
+
+  // Big O complexity O(1)
+  peek() {
+    if (this.length === 0) return undefined;
+    return this.front.data;
+  }
+
+  // Big O complexity O(1)
+  size() {
+    return this.length;
+  }
+
+  // Big O complexity O(1)
+  isEmpty() {
+    return this.length === 0 || this.front === null;
+  }
+
+  toArray() {
+    const newArray = [];
+
+    let current = this.front;
+    while (current) {
+      newArray.push(current.data);
+      current = current.next;
+    }
+    return newArray;
+  }
 }
 
 const queueOne = new Queue();
 
-// queueOne.enqueue("A");
-// queueOne.enqueue("B");
+queueOne.enqueue("A");
+queueOne.enqueue("B");
 queueOne.enqueue("C");
-console.log(queueOne.dequeue());
+// console.log(queueOne.dequeue());
 
-console.log(queueOne);
+console.log(queueOne.toArray());
+console.log(queueOne.peek());
+console.log(queueOne.size());
