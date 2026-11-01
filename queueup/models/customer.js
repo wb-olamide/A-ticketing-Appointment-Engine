@@ -26,6 +26,6 @@ class Customer {
   }
 }
 
-const customerOne = new Customer("ade", "09061118351", "disabled");
+
 
 module.exports = Customer;

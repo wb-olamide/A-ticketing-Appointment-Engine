@@ -166,4 +166,4 @@ listOne.insertAt(1, "B");
 // console.log(listOne.getNode(0));
 // console.log();
 
-console.log(listOne);
+// console.log(listOne);
